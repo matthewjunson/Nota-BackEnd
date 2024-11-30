@@ -1,0 +1,49 @@
+use NOTA
+
+db.createCollection("notes", {
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      required: ["_id", "creationDate", "modifiedDate", "title", "pinned"],
+      properties: {
+        _id: {
+          bsonType: "objectId",
+          description: "Must be an ObjectId and is required"
+        },
+        creationDate: {
+          bsonType: "date",
+          description: "Must be a date and is required"
+        },
+        modifiedDate: {
+          bsonType: "date",
+          description: "Must be a date and is required"
+        },
+        title: {
+          bsonType: "string",
+          minLength: 1,
+          description: "Must be a string and is required"
+        },
+        body: {
+          bsonType: "string",
+          description: "Must be a string and is optional"
+        },
+        category: {
+          bsonType: "string",
+          description: "Must be a string and is optional"
+        },
+        pinned: {
+          bsonType: "bool",
+          description: "Must be a boolean and is required"
+        }
+      }
+    }
+  },
+  validationLevel: "strict",
+  validationAction: "error"
+});
+
+db.notes.createIndex({ category: 1 });
+
+db.notes.createIndex({ pinned: 1 });
+
+print("Notes collection created with validation and indexes");
