@@ -31,11 +31,14 @@ connectToMongo();
 // Create a new note
 app.post("/api/notes", async (req, res) => {
   try {
+    const now = new Date();
     const note = {
-      Title: req.body.Title,
-      Body: req.body.Body,
-      Category: req.body.Category || "General", // Default category
-      createdAt: new Date(),
+        CreationDate: now,
+        ModifiedDate: now,
+        Title: req.body.Title,
+        Body: req.body.Body,
+        Category: req.body.Category || "General", // Default category
+        Pinned: req.body.Pinned || false,
     };
 
     const result = await db.collection("Notes Collection").insertOne(note); // Collection name: Notes Collection
