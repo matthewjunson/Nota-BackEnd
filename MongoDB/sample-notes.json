@@ -2,59 +2,59 @@
   "_id": {
     "$oid": "6748ef62d890cb95c87311a2"
   },
-  "creationDate": {
+  "CreationDate": {
     "$date": "2024-11-28T22:32:02.240Z"
   },
-  "modifiedDate": {
+  "ModifiedDate": {
     "$date": "2024-11-28T22:32:02.240Z"
   },
-  "title": "Note with Date and Time",
-  "body": "This note tests the date and time storage.",
-  "category": "Test",
-  "pinned": false
+  "Title": "Note with Date and Time",
+  "Body": "This note tests the date and time storage.",
+  "Category": "Test",
+  "Pinned": false
 },
 {
   "_id": {
     "$oid": "674906fad890cb95c87311a6"
   },
-  "creationDate": {
+  "CreationDate": {
     "$date": "2024-11-29T00:12:42.591Z"
   },
-  "modifiedDate": {
+  "ModifiedDate": {
     "$date": "2024-11-29T00:12:42.591Z"
   },
-  "title": "Meeting Notes",
-  "body": "Discuss project milestones.",
-  "category": "Work",
-  "pinned": false
+  "Title": "Meeting Notes",
+  "Body": "Discuss project milestones.",
+  "Category": "Work",
+  "Pinned": false
 },
 {
   "_id": {
     "$oid": "674906fad890cb95c87311a7"
   },
-  "creationDate": {
+  "CreationDate": {
     "$date": "2024-11-29T00:12:42.591Z"
   },
-  "modifiedDate": {
+  "ModifiedDate": {
     "$date": "2024-11-29T00:12:42.591Z"
   },
-  "title": "Shopping List",
-  "body": "Milk, Eggs, Bread, Butter",
-  "category": "Personal",
-  "pinned": false
+  "Title": "Shopping List",
+  "Body": "Milk, Eggs, Bread, Butter",
+  "Category": "Personal",
+  "Pinned": false
 },
 {
   "_id": {
     "$oid": "674906fad890cb95c87311a8"
   },
-  "creationDate": {
+  "CreationDate": {
     "$date": "2024-11-29T00:12:42.591Z"
   },
-  "modifiedDate": {
+  "ModifiedDate": {
     "$date": "2024-11-29T00:12:42.591Z"
   },
-  "title": "Book to Read",
-  "body": "Sapiens by Yuval Noah Harari",
-  "category": "Personal",
-  "pinned": true
+  "Title": "Book to Read",
+  "Body": "Sapiens by Yuval Noah Harari",
+  "Category": "Personal",
+  "Pinned": true
 }]
