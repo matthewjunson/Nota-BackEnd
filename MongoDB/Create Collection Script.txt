@@ -4,34 +4,34 @@ db.createCollection("notes", {
   validator: {
     $jsonSchema: {
       bsonType: "object",
-      required: ["_id", "creationDate", "modifiedDate", "title", "pinned"],
+      required: ["_id", "CreationDate", "ModifiedDate", "Title", "Pinned"],
       properties: {
         _id: {
           bsonType: "objectId",
           description: "Must be an ObjectId and is required"
         },
-        creationDate: {
+        CreationDate: {
           bsonType: "date",
           description: "Must be a date and is required"
         },
-        modifiedDate: {
+        ModifiedDate: {
           bsonType: "date",
           description: "Must be a date and is required"
         },
-        title: {
+        Title: {
           bsonType: "string",
           minLength: 1,
           description: "Must be a string and is required"
         },
-        body: {
+        Body: {
           bsonType: "string",
           description: "Must be a string and is optional"
         },
-        category: {
+        Category: {
           bsonType: "string",
           description: "Must be a string and is optional"
         },
-        pinned: {
+        Pinned: {
           bsonType: "bool",
           description: "Must be a boolean and is required"
         }
