@@ -54,7 +54,8 @@ app.get("/api/notes", async (req, res) => {
     const notes = await db
       .collection(process.env.collection || "Notes Collection")
       .find()
-      .sort({ ModifiedDate: -1 }) // Most recently changed first
+      .sort({ Pinned: -1, ModifiedDate: -1 })
+        // sort first by true Pinned state, then by most recent ModifiedDate
       .toArray();
     res.json(notes);
   } catch (error) {
