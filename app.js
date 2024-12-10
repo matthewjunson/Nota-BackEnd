@@ -79,7 +79,6 @@ app.put("/api/notes/updateNote/:id", async (req, res) => {
       Title: req.body.Title,
       Body: req.body.Body,
       Category: req.body.Category || "General",
-      Pinned: req.body.Pinned,
     };
 
     // Update the document
