@@ -39,6 +39,7 @@ app.post("/api/notes", async (req, res) => {
         Body: req.body.Body,
         Category: req.body.Category || "General", // Default category
         Pinned: req.body.Pinned || false,
+        Color: req.body.Color,
     };
     const result = await db.collection(process.env.collection || "Notes Collection").insertOne(note); // Collection name: Notes Collection
     res.status(201).json({ _id: result.insertedId, ...note });
@@ -79,6 +80,7 @@ app.put("/api/notes/updateNote/:id", async (req, res) => {
       Title: req.body.Title,
       Body: req.body.Body,
       Category: req.body.Category || "General",
+      Color: req.body.Color,
     };
 
     // Update the document
@@ -126,7 +128,7 @@ app.put("/api/notes/changePinState/:id", async (req, res) => {
   }
 });
 
-
+// Delete note by ID
 app.delete("/api/notes/:id", async (req, res) => {
   try {
     const { id } = req.params;
